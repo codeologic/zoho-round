@@ -1,0 +1,196 @@
+1.  It was System Design round for 2 hours time duration. Design an In-Memory file management system.
+•	Module1: Create a new directory and file in all Levels.
+•	Module2: List all directories and files.
+•	Module3: Update file content.
+•	Module4: Update directory and file names.
+•	Module5: Delete directory and file.
+•	Module6: Restore deleted directories and files.
+ 
+2. Create an engine that can process the user query. The main focus is not the logic but System Design.
+1.	How the created query engine scales out perfectly even upon adding new features later?
+2.	How do we create a system that can handle the following inputs and process the input query?
+Question:
+1.	Given a table containing a set of 10 employees with respective fields:
+ID	Name	Age	Designation	Department	Reporting To
+2.	Show all employee data
+3.	Process the query:
+1.	Get input from the user until presses exit.
+2.	Get field value to compare, comparison operator as input
+1.	If the field value is age (int data type), supported comparators: >, <, !=, ==
+2.	If the field value is of string data type, supported comparators: ‘startswith’, ‘contains’, ‘endswith’, ‘notcontains’, ‘equals’ and ‘notequals’.
+3.	Use ‘AND’ in default for queries with multiple checks.
+4.	Eg: age > 30 and age < 50 and department contains finance and reporting to A
+4.	Show the reporting to hierarchy for the given employee name: J -> I -> F -> D -> C -> B-> A
+5.	Show the employees reporting to the given manager.
+6.	Show summary of Department, Designation, ReportingTo.
+
+
+3. Question was to build an Employee record management app with 5 tasks to be executed to qualify the round.
+we can hard code the employee records in any data structure of our choice.
+Columns of the table are: EmpName, Age, Designation, Department, ReportingTo
+Task 1: Display all the Employee records in a table format.
+Task 2: Search records based on user give criteria.(this task is divided into two sub tasks)
+a. display option according to the column type 1.String – Equals, Notequals, Contains, Notcontains, startswith, endswith 2.Integer- <, >, =, !=, between.
+
+
+
+b. apply the same for multiple conditions using ‘AND’ for each condition.  (similar to ‘where’ class in SQL using multiple columns).
+Task 3: print reporting tree of the given employee.
+Task 4: print the employees reporting to the given manager.
+Task 5: print summary of Department, Designation, ReportingTo.(menu driven)
+
+4.event management 
+5.TICKET RESERVATION SYSTEM
+1.	first simple reservation for 50 seats from A to F.
+2.	After stations are added in middle like B, C, D, E. Where people can board any station and get down at any station assuming train is going from A to F.
+3.	Then Waiting list are to be added after 50 seats reserved and if any reserved seat is cancelled we have to check the waiting list and need to confirm the seat if possible.
+4.	After which we need to print the details of the PNR details.
+
+
+6. The bank has initially three customers.There were  around eight modules .
+
+
+
+1.	Account Login
+2.	Purchase
+Account Login
+Giving customer id and password .Password should be encrypted and stored
+Encryption is like A-> B, B->C
+a-> b, b->c, c->d
+0->1, 1->2
+On successful login, it should print the account details
+          1.Create Gift Card
+          2. TopUp
+         3.Transaction History
+         4.Block
+
+
+
+         5.Logout
+1.Create Gift Card
+Gift card with 5 digit card no and 4 digit pin number will be genrated
+2.TopUp
+For topup, amount need to be reduced from main account balance and added to gift card
+3.Transaction History
+Should print all the transaction details of a particular gift card
+4.Block
+If the card is blocked, shouldn’t be available for topUp, Purchase.the amount in gift card should be transferred to main account
+5.Logging Out
+After log out, should go to main module,
+ 
+2.Purchase
+Login to the gift card
+Purchase Amount
+Then print Available balance
+7.Redeem points :
+For Every 100 rupee purchase, 1 reward point is added .For 10 reward points, 10 will be added to main account
+8.Doing for Multiple gift cards
+
+
+
+
+
+->BOMBARDED MAN GAME
+
+
+Design a system with following functionalities,
+1.	SET a variable
+2.	GET a variable
+3.	UNSET a variable
+4.	COUNT NUMBERS OF VARIABLE with given value
+5.	BEGIN — Begins a new transaction
+6.	ROLLBACK — Roll back all the commands in the open transaction
+7.	COMMIT — Commit the transaction
+EXAMPLE 1:
+
+
+
+SET a 20
+GET a 20
+SET b 30
+GET b 30
+SET a 10
+GET a 10
+UPDATE c 40 No variable named “c”
+SET c 30
+COUNT 30 2
+COUNT 40 null
+UNSET a
+GET a null
+EXAMPLE 2:
+GET a null
+SET a 30
+GET a 30
+EXAMPLE 3:
+SET a 30
+BEGIN
+GET a 30
+SET a 40
+GET a 40
+SET b 40
+GET b 40
+ROLLBACK
+GET b null
+GET a 30
+EXAMPLE 4:
+BEGIN
+SET a 40
+SET b 40
+SET c 50
+COUNT 40 2
+BEGIN
+COUNT 40 null
+COMMIT
+COUNT 40 2
+BEGIN
+SET c 10
+GET c 10
+ROLLBACK
+GET c 50
+
+
+Round 3:
+Given an employee date base.
+
+
+
+Name, Age, Designation, Department Of ten people.
+and Five tasks were given such as
+1. Print all employee details.
+2. Searching employee details
+3. Employees under the given manger name of the department
+4. reporting to tree of the given employee name
+
+
+
+->RAILWAY RESERVATION SYSTEM
+1.	In these rounds we were asked to implement the logic for 2 games
+– Minesweeper
+
+2.	– Breakout a.k.a. Arkanoid a.k.a. Brick-Breaker (you’ll find it online)
+
+
+The application was TOLL PAYMENT PROCESSING .
+They insisted us to do it in a object oriented language. First they asked the design( what are all the classes and objects & what data structure do you use).
+Application description:
+•	
+•	There are ‘n’ number of points in a highway out of which some points collect toll.
+•	Each toll has its own charging scheme according to the vehicles and whether or not they
+are a VIP user.
+•	If they are VIP user, 20% discount apply.
+•	If the vehicle passes 3 toll gates, it has to pay in all the 3 toll gates according to the
+scheme of respective tolls.
+There were 4 modules.
+1. Given the details of vehicle type, start and destination……display the total toll paid during
+the journey and print the amount after applying the discount.
+
+
+2. Display the details of all the tolls…..like what are all the vehicles(vehicle number) passed
+that respective toll and the amount each vehicle paid……and the total amount charged in
+that toll.
+3. Display the details of all the vehicles …….like what are all the journeys did it take….the
+start and destination of the same……tolls it passed during that journey….amount paid in
+that journey…..and the total amount paid by that vehicle.
+4. Assume the highway as a circular path……we have to find the short route and identify
+the tolls between that route and calculate the amount.
+
